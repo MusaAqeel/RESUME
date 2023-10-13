@@ -31,6 +31,22 @@
             border: 0;
         }
     </style>
+    <script type="text/javascript">
+        var reloadInterval = 250; // time in milliseconds (0.25 seconds)
+        var resumeFrame = null;
+        
+        function reloadFrame() {
+            // Reload the iframe source to force a refresh
+            var originalSrc = resumeFrame.src;
+            resumeFrame.src = '';
+            resumeFrame.src = originalSrc;
+        }
+
+        window.onload = function() {
+            resumeFrame = document.getElementById('resumeFrame');
+            setInterval(reloadFrame, reloadInterval);
+        }
+    </script>
 </head>
 <body>
     <iframe id="resumeFrame" src="https://docs.google.com/gview?url=https://github.com/MusaAqeel/resume/raw/main/Musa_Aqeel_GH_Resume_2023.pdf&embedded=true"></iframe>
