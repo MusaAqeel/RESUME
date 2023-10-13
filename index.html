@@ -32,7 +32,7 @@
         }
     </style>
     <script type="text/javascript">
-        var reloadInterval = 250; // time in milliseconds (0.25 seconds)
+        var reloadDelay = 250; // time in milliseconds (0.25 seconds)
         var resumeFrame = null;
         
         function reloadFrame() {
@@ -44,7 +44,7 @@
 
         window.onload = function() {
             resumeFrame = document.getElementById('resumeFrame');
-            setInterval(reloadFrame, reloadInterval);
+            setTimeout(reloadFrame, reloadDelay);
         }
     </script>
 </head>
