@@ -1,10 +1,39 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en" style="width:100%; height:100%;">
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Musa's Resume</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Musa's Resume</title>
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: rgb(209, 209, 209);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        #resumeButton {
+            font-size: 22px;
+            padding: 20px;
+            background-color: #008CBA;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #resumeFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 </head>
-  <body style="width:100%; height:100%; margin:0; background-color: rgb(209, 209, 209);">
-    <iframe src="https://docs.google.com/gview?url=https://github.com/MusaAqeel/resume/raw/main/Musa_Aqeel_GH_Resume_2023.pdf&embedded=true" style="width:100%; height:100%;" frameborder="0"></iframe>
-<!--     <button onclick="location.href='https://musaaqeel.com'" style="display: block; margin: 0 auto; margin-top: 20px; -webkit-animation: pulse 1s infinite; animation: pulse 1s infinite; font-size: 22px; font
- -->
+<body>
+    <iframe id="resumeFrame" src="https://docs.google.com/gview?url=https://github.com/MusaAqeel/resume/raw/main/Musa_Aqeel_GH_Resume_2023.pdf&embedded=true"></iframe>
+    <button id="resumeButton" onclick="window.location.href='https://docs.google.com/document/d/1G_EO9O3tJz2TQuA25tyIwp9ZoV8YKkLCEz9-4j61R2w'">RESUME</button>
+</body>
+</html>
