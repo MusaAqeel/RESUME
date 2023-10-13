@@ -1,12 +1,14 @@
 <head>
-  <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+  <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 </head>
 <body>
   <canvas id="pdf-renderer"></canvas>
   <script type="text/javascript">
     var url = 'https://github.com/MusaAqeel/resume/raw/main/Musa_Aqeel_GH_Resume_2023.pdf';
-    var pdfjsLib = window['pdfjs-dist/build/pdf'];
-    pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+    var pdfjsLib = window['pdfjsLib'];
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+
     var pdfDoc = null,
         pageNum = 1,
         pageRendering = false,
@@ -14,7 +16,7 @@
         scale = 1.5,
         canvas = document.getElementById('pdf-renderer'),
         ctx = canvas.getContext('2d');
-    
+
     function renderPage(num) {
       pageRendering = true;
       pdfDoc.getPage(num).then(function(page) {
@@ -35,7 +37,7 @@
         });
       });
     }
-    
+
     pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
       pdfDoc = pdfDoc_;
       renderPage(pageNum);
