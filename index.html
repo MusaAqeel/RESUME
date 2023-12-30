@@ -8,7 +8,7 @@
             width: 100%;
             height: 100%;
             margin: 0;
-            background-color: #FFF;
+            background-color: rgb(209, 209, 209);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -18,7 +18,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: #000;
+            background-color: #FFFFFF;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,8 +34,8 @@
             display: none;
         }
         .loader {
-            border: 5px solid #FFF;
-            border-top: 5px solid #000;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -64,7 +64,7 @@
 
         window.onload = function() {
             resumeFrame = document.getElementById('resumeFrame');
-            setTimeout(hideLoadingScreen, 750);
+            setTimeout(hideLoadingScreen, 1000);
             setTimeout(reloadFrame, reloadDelay);
         }
     </script>
